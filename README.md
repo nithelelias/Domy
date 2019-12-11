@@ -73,11 +73,11 @@ MainComponent.newInstance(document.getElementById("main"), ["oscar"]);
   
 ## Metodos
 	
-	* * **render   Este metodo se debe poner en el objeto que hereda de la super Clase componente, es aqui dentro donde se debe indicar la vista para mostrar, ya sea por String o Dom.
+* **render   Este metodo se debe poner en el objeto que hereda de la super Clase componente, es aqui dentro donde se debe indicar la vista para mostrar, ya sea por String o Dom.
 			
-	* * **toStringView  Este metodo devuelve la vista del componente en formato String.
+* **toStringView  Este metodo devuelve la vista del componente en formato String.
 
- 	* * **newInstance   Este metodo ESTATICO se crea para generar una instancia dentro de un elemento DOM.
+* **newInstance   Este metodo ESTATICO se crea para generar una instancia dentro de un elemento DOM.
 		@Parametros : 
 						{Node} DomNode elemento Dom al cual se le va anidar este componente.
 						{Array of Object } parametros, parametros de entrada que necesitara el Componente que se cree.
