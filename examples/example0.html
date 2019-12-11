@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejemplo 1, Componentes</title>
+</head>
+
+<body>
+    <p>
+        Esta es la forma basica de mostrar el contenido del componente relacionado a un objeto DOM
+    </p>
+
+    <div id="main">
+    </div>
+
+    <script type="module">
+
+        import Domy from "./Domy.js";
+
+        class MainComponent extends Domy.DComponent {
+            constructor(_name = "username") {
+                super();
+                this.state = {
+                    n: 0
+                };
+                this.name = _name;
+            }
+
+            render() {
+
+                return `<h1>Hello World!! ${this.state.n} ${this.name}</h1>`;
+            }
+        }
+
+        const mainC = MainComponent.newInstance(document.getElementById("main"), ["oscar"]);
+    </script>
+
+</body>
+
+</html>

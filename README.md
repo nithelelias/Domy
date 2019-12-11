@@ -12,7 +12,7 @@ cuando puedes tener el control exacto de las cosas que quieres implementar no ti
 
 # Porque Domy.
 
-Mescle los nombres DOM Library HTML Compomponent y no me gustaron asi que puse "DOM y que" y el "y que" sono grosero.
+Mezcle los nombres DOM Library HTML Compomponent y no me gustaron asi que puse "DOM y que" y el "y que" sono grosero.
 
 
 # Caracteristicas de Domy.
@@ -22,6 +22,7 @@ Mescle los nombres DOM Library HTML Compomponent y no me gustaron asi que puse "
 *  Estrictamente usa ESC5^  por lo que todas esta basado en POO.
 *  No requiere Jquery.
 *  Pocas palabras claves.
+*  Se refresca la vista inmediatamente se modifique algun valor del state.
 
 
 # Limitantes.
@@ -43,47 +44,46 @@ El componente para que funcione si o si debe estar anidado a un elemento DOM. si
 ``` 
 main.js
 ```js
-	import Domy from "./Domy.js";
+import Domy from "./Domy.js";
 	
 class MainComponent extends Domy.DComponent {
-    constructor(_name = "username") {
-        super();
-        this.state = { 
-            n: 0
-        }; 
+	constructor(_name = "username") {
+		super();
+		this.state = { 
+			n: 0
+		}; 
 		this.name=_name;
-    }
-	
-	render(){
-	
+	}	
+	render(){ 
 		return `<h1>Hello World!! ${this.state.n} ${this.name }</h1>`;
 	}
 }
 
-MainComponent.newInstance(document.getElementById("main"), ["oscar"]);
-
-
+MainComponent.newInstance(document.getElementById("main"), ["oscar"]); 
 
 ``` 
 
 
 
-#API
+#  API
 
 ## Propiedades 
 
-	* **state:**  Este es la propiedad tipo hash o json , que guardara informacion del estado de la instancia del componente, y si este cambia la vista se refrescara.
+	* * **state:   Este es la propiedad tipo hash o json , que guardara informacion del estado de la instancia del componente, y si este cambia la vista se refrescara.
   
 ## Metodos
 	
-	* **render**  Este metodo se debe poner en el objeto que hereda de la super Clase componente, es aqui dentro donde se debe indicar la vista para mostrar, ya sea por String o Dom.
+	* * **render   Este metodo se debe poner en el objeto que hereda de la super Clase componente, es aqui dentro donde se debe indicar la vista para mostrar, ya sea por String o Dom.
 			
-	* **toStringView** Este metodo devuelve la vista del componente en formato String.
+	* * **toStringView  Este metodo devuelve la vista del componente en formato String.
 
- 	* **newInstance**  Este metodo ESTATICO se crea para generar una instancia dentro de un elemento DOM.
+ 	* * **newInstance   Este metodo ESTATICO se crea para generar una instancia dentro de un elemento DOM.
 		@Parametros : 
 						{Node} DomNode elemento Dom al cual se le va anidar este componente.
 						{Array of Object } parametros, parametros de entrada que necesitara el Componente que se cree.
 	
 	
-	
+
+### Examples:
+ No hay muchos ejemplos pero pueden verlos aqui
+ [Examples](examples/README.md)
