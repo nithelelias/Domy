@@ -86,4 +86,4 @@ MainComponent.newInstance(document.getElementById("main"), ["oscar"]);
 
 ### Examples:
  No hay muchos ejemplos pero pueden verlos aqui
- [Examples](examples/README.md)
+ [Examples](examples/)
